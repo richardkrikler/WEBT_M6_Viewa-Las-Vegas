@@ -1,0 +1,17 @@
+{
+    "name": "richardkrikler/webt_m6_viewa-las-vegas",
+    "description": "WEBT-M6: Viewa Las Vegas",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "IgnisWeb\\ViewaLasVegas\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Richard Krikler",
+            "email": "8112@htl.rennweg.at"
+        }
+    ],
+    "require": {}
+}
