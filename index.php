@@ -15,11 +15,9 @@ $template = file_get_contents('templates/main.html');
 foreach ($hotels as $hotel) {
     foreach ($hotel->getKeyValuePairs() as $key => $value) {
         print($key . ' - ' . $value . "<br/>");
-        str_replace("###$key###", $value, $template);
+        $template = preg_replace("/[#]{3}($key)[#]{3}/", $value, $template, 1);
+        // $template = str_replace("###$key###", $value, $template);
     }
-//    $template = str_replace("###$key###", $value, $template);
 }
 
-
 echo $template;
-
