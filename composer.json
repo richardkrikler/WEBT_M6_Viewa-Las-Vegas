@@ -13,5 +13,7 @@
             "email": "8112@htl.rennweg.at"
         }
     ],
-    "require": {}
+    "require": {
+      "ext-pdo": "*"
+    }
 }
