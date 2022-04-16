@@ -23,43 +23,19 @@
 </header>
 
 <main class="container">
+    {% for hotel in hotels %}
     <div class="row justify-content-between">
         <div class="col-sm-7 p-4">
-            <h2 class="h1 fw-bold"> ###NAME###
-                <div><span class="stars">###STARS###</span></div>
+            <h2 class="h1 fw-bold">{{ hotel.name }}
+                <div><span class="stars">{{ hotel.stars }}</span></div>
             </h2>
-            <p>###STREET### ###HOUSE_NUMBER###, ###CITY### (###POSTAL_CODE###), ###COUNTRY### (###COUNTRY_ID###)</p>
-            <h3 class="">###DESCRIPTION###</h3>
+            <p>{{ hotel.location.street }} {{ hotel.location.houseNumber }}, {{ hotel.location.city }} ({{ hotel.location.postalCode }}), {{ hotel.location.country }} ({{ hotel.location.countryId }})</p>
+            <h3 class="">{{ hotel.description }}</h3>
         </div>
 
-        <div class="col-sm-5 p-0 img-container" style="background-image: url('###IMG_URL###')"></div>
+        <div class="col-sm-5 p-0 img-container" style="{{ 'background-image: url(\'' ~ hotel.imgUrl ~ '\')' }}"></div>
     </div>
-
-    <div class="row justify-content-between">
-        <div class="col-sm-7 p-4">
-            <h2 class="h1 fw-bold"> ###NAME###
-                <div><span class="stars">###STARS###</span></div>
-            </h2>
-            <p>###STREET### ###HOUSE_NUMBER###, ###CITY### (###POSTAL_CODE###), ###COUNTRY### (###COUNTRY_ID###)</p>
-            <h3 class="">###DESCRIPTION###</h3>
-        </div>
-
-        <div class="col-sm-5 p-0 img-container" style="background-image: url('###IMG_URL###')"></div>
-    </div>
-
-    <div class="row justify-content-between">
-        <div class="col-sm-7 p-4">
-            <h2 class="h1 fw-bold"> ###NAME###
-                <div><span class="stars">###STARS###</span></div>
-            </h2>
-            <p>###STREET### ###HOUSE_NUMBER###, ###CITY### (###POSTAL_CODE###), ###COUNTRY### (###COUNTRY_ID###)</p>
-            <h3 class="">###DESCRIPTION###</h3>
-        </div>
-
-        <div class="col-sm-5 p-0 img-container" style="background-image: url('###IMG_URL###')"></div>
-    </div>
-
-
+    {% endfor %}
 </main>
 
 
